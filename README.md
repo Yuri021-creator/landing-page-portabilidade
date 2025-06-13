@@ -1,1 +1,113 @@
-# landing-page-portabilidade
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portabilidade INSS com Troco</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #003366;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .benefits {
+      text-align: left;
+      margin-top: 20px;
+    }
+    .benefits li {
+      margin-bottom: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background-color: #007bff;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .cta:hover {
+      background-color: #005fcc;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Já paga empréstimo no INSS?</h1>
+    <p>Você pode estar pagando mais do que deveria!</p>
+    <p><strong>Faça a portabilidade agora mesmo:</strong></p>
+    <ul class="benefits">
+      <li>✅ Receba dinheiro na conta</li>
+      <li>✅ Reduza o valor da sua parcela</li>
+      <li>✅ Sem novo empréstimo</li>
+      <li>✅ Processo 100% seguro</li>
+    </ul>
+
+    <form id="form">
+      <input type="text" id="nome" placeholder="Seu nome completo" required>
+      <input type="text" id="cpf" placeholder="Seu CPF" required>
+      <input type="text" id="telefone" placeholder="Seu telefone" required>
+      <select id="tipo">
+        <option value="">Selecione uma opção</option>
+        <option value="Aposentado do INSS">Aposentado do INSS</option>
+        <option value="Pensionista do INSS">Pensionista do INSS</option>
+        <option value="Saque do FGTS">Saque do FGTS</option>
+        <option value="Consórcio">Consórcio</option>
+      </select>
+      <a href="#" onclick="enviarWhatsApp()" class="cta">📲 Enviar para o WhatsApp</a>
+    </form>
+
+    <footer>
+      © 2025 Big Credit Assessoria - Correspondente autorizado
+    </footer>
+  </div>
+
+  <script>
+    function enviarWhatsApp() {
+      var nome = document.getElementById('nome').value;
+      var cpf = document.getElementById('cpf').value;
+      var telefone = document.getElementById('telefone').value;
+      var tipo = document.getElementById('tipo').value;
+
+      var mensagem = `Olá, meu nome é ${nome}.%0ACPF: ${cpf}%0ATelefone: ${telefone}%0AQuero saber sobre: ${tipo}`;
+
+      var url = `https://wa.me/5511985573882?text=${mensagem}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
